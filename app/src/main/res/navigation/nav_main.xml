@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.foodapp.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="foodId"
+            app:argType="integer" />
+    </fragment>
+    <action
+        android:id="@+id/action_homeFragment_to_detailFragment"
+        app:destination="@id/detailFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.foodapp.ui.list.FoodListFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_food_list" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.example.foodapp.ui.favorite.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+</navigation>
